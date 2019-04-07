@@ -1,0 +1,29 @@
+{
+	"name": "Curmudgeon",
+	"version": "1.0",
+	"description": "Bring back the old JIRA! Get off my lawn!",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"permissions" : [
+		"webRequest",
+		"webRequestBlocking",
+		"*://starlingsolutions.atlassian.net/*"
+	],
+	"page_action": {
+		"default_icon": {
+			"16": "images/oldman16.png",
+			"32": "images/oldman32.png",
+			"48": "images/oldman48.png",
+			"128": "images/oldman128.png"
+		}
+	},
+	"icons": {
+		"16": "images/oldman16.png",
+		"32": "images/oldman32.png",
+		"48": "images/oldman48.png",
+		"128": "images/oldman128.png"
+	},
+	"manifest_version": 2
+}
