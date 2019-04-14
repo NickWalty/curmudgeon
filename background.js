@@ -1,7 +1,8 @@
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-    	let incomingURL = details.url.split('?');
-    	if ( !incomingURL.length  || incomingURL.includes("oldIssueView=true", 0) ) {
+    	let incomingURL    = details.url.split('/');
+        let incomingParams = details.url.split('?');
+    	if ( incomingURL[incomingURL.length -2] !== 'browse' || incomingParams.includes('oldIssueView=true') ) {
     		return {redirectUrl: details.url}; //Don't add parameters
     	} 
     	let newUrl = details.url + '?oldIssueView=true';
